@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Regression-Test-Suite]">
+  <parameter name="browser" value="chrome"/>
+  <test name="Regression-Tests-Firefox(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.testScript.BookHotelConfirmTests">
+        <methods>
+          <include name="setup"/>
+          <include name="teardown"/>
+          <include name="orderIdPresentTest"/>
+          <include name="beforeClass"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- com.testScript.BookHotelConfirmTests -->
+      <class name="com.testScript.LoginTests">
+        <methods>
+          <include name="teardown"/>
+          <include name="invalidLoginTest"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.testScript.LoginTests -->
+      <class name="com.testScript.SelectHotelValidationTest">
+        <methods>
+          <include name="locationNameReflectedInHotelSelectTest"/>
+          <include name="teardown"/>
+          <include name="checkinCheckoutReflectedInHotelSelectTest"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.testScript.SelectHotelValidationTest -->
+      <class name="com.testScript.SearchHotelTests">
+        <methods>
+          <include name="checkOutDateIsPastCheckInDateTest"/>
+          <include name="setup"/>
+          <include name="checkInDateIsPastTest"/>
+          <include name="validateDropDownsTest"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.testScript.SearchHotelTests -->
+    </classes>
+  </test> <!-- Regression-Tests-Firefox(failed) -->
+  <test name="Regression-Tests-Chrome(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.testScript.BookHotelConfirmTests">
+        <methods>
+          <include name="setup"/>
+          <include name="teardown"/>
+          <include name="orderIdPresentTest"/>
+          <include name="beforeClass"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- com.testScript.BookHotelConfirmTests -->
+      <class name="com.testScript.LoginTests">
+        <methods>
+          <include name="teardown"/>
+          <include name="invalidLoginTest"/>
+          <include name="setup"/>
+          <include name="registerNewUserNavigationTest"/>
+          <include name="forgotPasswordLinkNavigationTest"/>
+        </methods>
+      </class> <!-- com.testScript.LoginTests -->
+      <class name="com.testScript.SelectHotelValidationTest">
+        <methods>
+          <include name="locationNameReflectedInHotelSelectTest"/>
+          <include name="teardown"/>
+          <include name="checkinCheckoutReflectedInHotelSelectTest"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.testScript.SelectHotelValidationTest -->
+      <class name="com.testScript.SearchHotelTests">
+        <methods>
+          <include name="checkOutDateIsPastCheckInDateTest"/>
+          <include name="setup"/>
+          <include name="checkInDateIsPastTest"/>
+          <include name="validateDropDownsTest"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.testScript.SearchHotelTests -->
+    </classes>
+  </test> <!-- Regression-Tests-Chrome(failed) -->
+</suite> <!-- Failed suite [Regression-Test-Suite] -->

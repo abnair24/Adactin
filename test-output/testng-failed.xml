@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Functional-Test-Suite]">
+  <parameter name="browser" value="firefox"/>
+  <test name="Functional-Tests(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.testScript.CancelOrderIdsTests">
+        <methods>
+          <include name="setup"/>
+          <include name="teardown"/>
+          <include name="cancelOrderButtonTest"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- com.testScript.CancelOrderIdsTests -->
+      <class name="com.testScript.BookHotelConfirmTests">
+        <methods>
+          <include name="setup"/>
+          <include name="teardown"/>
+          <include name="searchOrderIdTest"/>
+          <include name="orderIdPresentTest"/>
+        </methods>
+      </class> <!-- com.testScript.BookHotelConfirmTests -->
+      <class name="com.testScript.LoginTests">
+        <methods>
+          <include name="teardown"/>
+          <include name="setup"/>
+          <include name="validLoginTest"/>
+        </methods>
+      </class> <!-- com.testScript.LoginTests -->
+      <class name="com.testScript.SelectHotelValidationTest">
+        <methods>
+          <include name="defaultHotelSelectionTest"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.testScript.SelectHotelValidationTest -->
+    </classes>
+  </test> <!-- Functional-Tests(failed) -->
+</suite> <!-- Failed suite [Functional-Test-Suite] -->

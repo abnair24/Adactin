@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression-Test-Suite" parallel="false">
+	<test name="Regression-Tests-Firefox" preserve-order="true">
+	
+	 <parameter name="browser" value="firefox" />
+	 
+  		<classes preserve-order="true">
+  			<class name="com.testScript.LoginTests"/>
+  				<methods>
+  					<include name="registerNewUserNavigationTest"/>
+  					<include name="forgotPasswordLinkNavigationTest"/>
+  					<include name="invalidLoginTest"/>
+  				</methods>
+  			<class name="com.testScript.SearchHotelTests"/>
+  				<methods>
+  					<include name="validateDropDownsTest"/>
+  					<include name="checkOutDateIsPastCheckInDateTest"/>
+  					<include name="checkInDateIsPastTest"/>
+  				</methods>
+  			<class name="com.testScript.SelectHotelValidationTest"/>
+  				<methods>
+  					<include name="locationNameReflectedInHotelSelectTest"/>
+  					<include name="checkinCheckoutReflectedInHotelSelectTest"/>
+  				</methods>
+  			<class name="com.testScript.BookHotelConfirmTests"/>
+  				<methods>
+  					<include name="orderIdPresentTest"/>
+  				</methods>
+  		</classes>	
+  	</test> 
+  	
+  	<test name="Regression-Tests-Chrome" preserve-order="true">
+  	
+	 <parameter name="browser" value="chrome" />
+	 
+  		<classes preserve-order="true">
+  			<class name="com.testScript.LoginTests"/>
+  				<methods>
+  					<include name="registerNewUserNavigationTest"/>
+  					<include name="forgotPasswordLinkNavigationTest"/>
+  					<include name="invalidLoginTest"/>
+  				</methods>
+  			<class name="com.testScript.SearchHotelTests"/>
+  				<methods>
+  					<include name="validateDropDownsTest"/>
+  					<include name="checkOutDateIsPastCheckInDateTest"/>
+  					<include name="checkInDateIsPastTest"/>
+  				</methods>
+  			<class name="com.testScript.SelectHotelValidationTest"/>
+  				<methods>
+  					<include name="locationNameReflectedInHotelSelectTest"/>
+  					<include name="checkinCheckoutReflectedInHotelSelectTest"/>
+  				</methods>
+  			<class name="com.testScript.BookHotelConfirmTests"/>
+  				<methods>
+  					<include name="orderIdPresentTest"/>
+  				</methods>
+  		</classes>	
+  	</test>
+</suite>    

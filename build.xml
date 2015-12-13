@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Automation-Adactin" default="run" basedir=".">
+ 	<property name="src.dir" value="${basedir}/src" />
+ 	<property name="build.dir" value="${basedir}/build" />
+ 	<property name="lib.dir" value="${basedir}/lib" />
+	<property name="test-output.dir" value="${basedir}/test-output"/>
+	<property name="Output.dir" value="${basedir}/Output"/>
+	<property name="Reports.dir" value="${basedir}/Reports"/>
+	 	 
+	<target name="setClassPath">
+		<path id="classpath_jars">
+			<pathelement path="${basedir}/"/>
+			<fileset dir="${lib.dir}" includes="*.jar"/>
+		</path>
+		<pathconvert pathsep=":" property="test.classpath" refid="classpath_jars"/>
+	</target>
+	
+	<target name="loadTestNG" depends="setClassPath">
+		<taskdef resource="testngtasks" classpath="${test.classpath}"/>
+	</target>
+	
+	<target name="init">
+		<mkdir dir="${build.dir}"/>
+		<mkdir dir="${Output.dir}"/>
+	</target>
+	
+	<target name="clean" description="Remove previous">
+		<delete dir = "${build.dir}" />
+		<delete dir="${test-output.dir}"/>
+		<delete dir="${Output.dir}"/>
+		<delete dir="${Reports.dir}"/>
+		
+	    
+	</target>
+	
+	<target name="compile" depends="clean,init,setClassPath,loadTestNG" description="compile whole project">
+		<echo message="classpath:${test.classpath}"/>
+		<echo message="compiling... "/>
+		<javac srcdir="${src.dir}" destdir="${build.dir}" classpath="${test.classpath}" />
+	<!--
+	 <mkdir dir="${build.dir}/com/core/uimap" />
+		<copy todir="${build.dir}/com/core/uimap">
+		  <fileset dir ="${uimap.dir}" />
+		</copy> 
+	-->
+	</target>	
+
+	<target name="run" depends="compile">
+		<testng classpath="${test.classpath}:${build.dir}">
+			<xmlfileset dir="${basedir}" includes="testng.xml"/>
+		</testng>
+	</target>
+	
+		
+</project>

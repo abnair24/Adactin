@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Functional-Test-Suite" parallel="false">
+  <test name="Functional-Tests" preserve-order="true">
+  
+   <parameter name="browser" value="firefox"/>
+   
+    <classes preserve-order="true">
+      <class name="com.testScript.LoginTests"/>
+      	<methods>
+      		<include name="validLoginTest"/>
+      	</methods>      
+      <class name="com.testScript.SelectHotelValidationTest"/>
+      	<methods>
+      		<include name="defaultHotelSelectionTest"/>
+      	</methods>
+      <class name="com.testScript.BookHotelConfirmTests"/>
+      	<methods>
+      	    <include name="orderIdPresentTest"/>
+      		<include name="searchOrderIdTest"/>
+      	</methods>
+      <class name="com.testScript.CancelOrderIdsTests"/>
+      	<methods>
+      		<include name="cancelOrderButtonTest"/>
+      	</methods>
+    </classes>
+  </test>
+</suite>
